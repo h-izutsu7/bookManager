@@ -1,0 +1,70 @@
+
+.preview-box {
+  border: solid 1px #000000;
+  padding: 10px;
+  text-align: center;
+}
+.preview-box img{
+  width: 300px;
+  height: 420px;
+  border: solid 1px #000000;
+}
+.preview-box p{
+  margin: 0;
+  padding-top: 10px;
+}
+#img-title {
+  width:1092px;
+}
+.bookList img{
+}
+.img-list.book-update {
+  padding: 9px;
+}
+
+/* 本情報作成テーブル */
+.book-info-wrap {
+  margin: 0 40px;
+}
+.button-wrap {
+  margin-top: 20px;
+}
+.button-wrap div:nth-child(3){
+  margin-right: 10px;
+}
+.information-table {
+}
+.information-table tr{
+  margin-bottom: 10px;
+}
+.information-table td:nth-child(1) {
+  font-size: 15px;
+  font-weight: bold;
+}
+input{
+  height: 30px;
+}
+select {
+  min-width: 200px;
+  height: 30px;
+}
+.information-table tr:nth-child(1) td:nth-child(2) input,
+.information-table tr:nth-child(2) td:nth-child(2) input{
+  width: 400px;
+}
+.information-table tr:nth-child(3) td:nth-child(2) input,
+.information-table tr:nth-child(4) td:nth-child(2) input{
+  width: 200px;
+}
+
+.information-table img{
+  width: 10%;
+  height:auto;
+  cursor: pointer;
+}
+.information-table img:hover {
+    filter:  opacity(80%);
+}
+.information-table td img {
+  vertical-align: middle;
+}

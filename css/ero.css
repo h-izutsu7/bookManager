@@ -1,0 +1,187 @@
+/*-- ���C���u���b�N --*/
+#container {
+  width: 1300px;
+  margin:0 auto;
+  background: ;
+}
+.header {
+  width: 1300px;
+  height:100px;
+  background: #FF69A3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header:hover {
+  cursor: pointer;
+}
+.side-menu {
+  width: 200px;
+  height:1200px;
+  background: #EAD9FF;
+}
+#main .bookList{
+  width: 1100px;
+  background: #FFF;
+}
+
+#foter {
+  width: 1200px;
+  height:100px;
+  background: #DDFFFF;
+  float: left;
+}
+#header-txt {
+  color: #FFF;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.clealfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.fl-l {
+float: left;
+}
+.fl-r {
+float: right;
+}
+/*-- �T�C�h���j���[ --*/
+label {
+    background: #FF82B2;
+    color: #fff;
+    padding: 10px;
+    display: block;
+    margin: 0;
+    border: 1px solid #fff;
+}
+
+input[type="checkbox"].on-off{
+    display: none;
+}
+
+.side-menu ul {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.side-menu li {
+    padding: 5px;
+}
+
+input[type="checkbox"].on-off + ul{
+    height: 0;
+    overflow: hidden;
+}
+
+input[type="checkbox"].on-off:checked + ul{
+    height: 250px;
+}
+
+/*-- ���C���E�摜 --*/
+#img-title {
+  height:50px;
+  margin:3px;
+  background: #FFF;
+  border:1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#img-title-txt {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.img-box {
+  width:198px;
+  margin:5px;
+  padding:5px;
+  border:1px solid black;
+  background-color:#FFF;
+  text-align: center;
+}
+
+.img-box span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+img{
+   width: 100%;
+   height: 280px;
+}
+.preview-box {
+  border: solid 1px #000000;
+  padding: 10px;
+  text-align: center;
+}
+.preview-box img{
+  width: 300px;
+  height: 420px;
+  border: solid 1px #000000;
+}
+.preview-box p{
+  margin: 0;
+  padding-top: 10px;
+}
+
+#img-title {
+  width:1092px;
+}
+.bookList img{
+}
+
+.img-list.book-update {
+  padding: 9px;
+}
+
+/* �{�����e�[�u�� */
+.information-table td:nth-child(1) {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.information-table tr:nth-child(1) td:nth-child(2) input,
+.information-table tr:nth-child(2) td:nth-child(2) input{
+  width: 400px;
+}
+
+.information-table img{
+  width: 10%;
+  height:auto;
+}
+.information-table td{
+  vertical-align: middle;
+}
+
+/* ページャー */
+.pager {
+  text-align: center;
+}
+.page {
+  display: inline-block;
+  min-width: 30px;
+  border: solid 1px rgb(177, 177, 157);
+  text-decoration: none;
+  color: #000000;
+  border-radius: 5px;
+  padding: 3px;
+}
+#displayNum {
+  width: 50px;
+  height: 20px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}

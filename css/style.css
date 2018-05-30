@@ -1,0 +1,130 @@
+/* クラス定義 */
+.clealfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.fl-l {
+float: left;
+}
+.fl-r {
+float: right;
+}
+
+#container {
+  width: 1300px;
+  margin:0 auto;
+  background: ;
+}
+.header {
+  width: 1300px;
+  height:100px;
+  background: #36c0e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header:hover {
+  cursor: pointer;
+}
+#main .bookList{
+  width: 1100px;
+  background: #FFF;
+}
+#foter {
+  width: 1200px;
+  height:100px;
+  background: #DDFFFF;
+  float: left;
+}
+#header-txt {
+  color: #FFF;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+
+/*-- サイドメニュー --*/
+.side-menu {
+  width: 200px;
+  height:1200px;
+  background: #EAD9FF;
+}
+
+label {
+    background: #36c0e2;
+    filter:  opacity(70%);
+    color: #fff;
+    padding: 10px;
+    display: block;
+    margin: 0;
+    border: 1px solid #fff;
+}
+input[type="checkbox"].on-off{
+    display: none;
+}
+.side-menu ul {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.side-menu li {
+    padding: 5px;
+}
+input[type="checkbox"].on-off + ul{
+    height: 0;
+    overflow: hidden;
+}
+input[type="checkbox"].on-off:checked + ul{
+    height: 250px;
+}
+
+/*---------- コンテンツタイトル ----------*/
+#img-title {
+  height:50px;
+  width: 1092px;
+  margin:3px;
+  background: #FFF;
+  border:1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#img-title-txt {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/*------------------ ボタン ---------------------*/
+.google-btn {
+  color: #FFFFFF;
+  background-color: #4285f4;
+  border-style: none;
+  font-size: 13px;
+  font-weight: bold;
+  width:90px;
+  height:30px;
+  border-radius: 2px;
+}
+.button:hover {
+  cursor: pointer;
+  filter:  brightness(80%);
+}
+.disabled {
+  background: #898b83;
+}
+
+/* カラーパレット */
+.color-palette{
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
