@@ -28,6 +28,7 @@ class Book extends Base
           b.introduction,
           b.folder_path,
           b.thumbnail,
+          b.favo_flg,
           b.html,
           b.del_flg
         FROM
@@ -38,7 +39,7 @@ class Book extends Base
 
         list($where, $bindParams) = $this->getBookInfoCondition($params);
 
-        $sql .= $where;
+        $sql .= $where . ' ORDER BY book_id ASC';
 
         // var_dump($sql);exit;
 
@@ -61,19 +62,25 @@ class Book extends Base
         $bindParams['del_flg'] = 0;
         if ($params) {
 
-          if (isset($params['category']) AND $params['category']) {
+          if (isset($params['category']) && $params['category']) {
             $where .= ' AND c.category_name = :category_name';
             $bindParams['category_name'] = $params['category'];
           }
-          if (isset($params['genre']) AND $params['genre']) {
+          if (isset($params['genre']) && $params['genre']) {
             $where .= ' AND g.genre_name = :genre_name';
             $bindParams['genre_name'] = $params['genre'];
           }
-          if (isset($params['book_id']) AND $params['book_id']) {
+          if (isset($params['favo']) && $params['favo']) {
+            $where .= ' AND b.favo_flg = :favo_flg';
+            $bindParams['favo_flg'] = $params['favo'];
+          }
+          if (isset($params['book_id']) && $params['book_id']) {
             $where .= ' AND b.book_id = :book_id';
             $bindParams['book_id'] = $params['book_id'];
           }
         }
+
+        // var_dump($where, $bindParams);exit;
 
         return array($where, $bindParams);
     }
@@ -102,6 +109,7 @@ class Book extends Base
               'book_name' => $book['book_name'],
               'introduction' => $book['introduction'],
               'thumbnail' => $book['folder_path'] . $book['thumbnail'],
+              'favo_flg' => $book['favo_flg'],
               'folder_path' => $book['folder_path'],
               'html' => $html,
           ];
@@ -195,6 +203,27 @@ class Book extends Base
       $qry = "SELECT book_id FROM book ORDER BY book_id DESC LIMIT 1";
 
       return $this->getQueryInfo($qry)[0]['book_id'];
+    }
+
+    /*
+     *
+     */
+    public function updateFavoFlg ($params) {
+
+        $db = $this->dbConnection();
+
+        $sql = "UPDATE book SET favo_flg = :favo_flg WHERE book_id = :book_id";
+
+        $stmt = $db->prepare($sql);
+
+        $bindParams = [
+            ':favo_flg' => $params['favo_flg'],
+            ':book_id' => $params['book_id']
+        ];
+
+        $result = $stmt->execute($bindParams);
+
+        return $result;
     }
 }
 
